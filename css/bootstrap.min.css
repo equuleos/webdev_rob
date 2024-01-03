@@ -642,6 +642,10 @@ progress {
 .img-fluid {
     max-width: 100%;
     height: auto;
+}
+.img-block {
+    max-width: 100%;
+    height: auto;
     border-radius: .5em;
     box-shadow: 5px 10px #888888;
     text-align: center;
