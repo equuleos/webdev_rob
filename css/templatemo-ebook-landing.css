@@ -1057,3 +1057,8 @@ strong {
     height: auto; /* Example height */
     /* Other styling properties */
 }
+
+.mySlides {display:none;}
+.w3-content,.w3-auto{margin-left:auto;margin-right:auto.w3-content{max-width:980px}
+.w3-auto{max-width:1140px}
+.w3-section,.w3-code{margin-top:16px!important;margin-bottom:16px!important}
