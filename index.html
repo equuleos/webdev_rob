@@ -1,538 +1,1207 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robert Cruz - Senior E-commerce Specialist | Global Digital Solutions</title>
+    <meta name="description" content="Robert Cruz - Senior E-commerce Specialist| WordPress Developer & Google-Certified SEO Specialist. Building optimized, high-converting websites and AI automation workflows for global clients.">
+    <meta name="keywords" content="WordPress Developer, SEO Specialist, E-commerce, Web Development, Automation, GoHighLevel, n8n">
 
-        <meta name="description" content="">
-        <meta name="author" content="">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        <title>Robert Cruz - Your All-in-One Services</title>
-        <meta name="description" content="Highly Demand for New Business - All-in-One Website Needs: SEO, WordPress, Shopify, and Content Creation" />
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #0f3460;
+            --highlight: #e94560;
+            --light: #f5f5f5;
+            --text: #333;
+            --text-light: #666;
+        }
 
-        <!-- CSS FILES -->        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        html {
+            scroll-behavior: smooth;
+        }
 
-        <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700&display=swap" rel="stylesheet">
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--light);
+        }
 
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+        /* Navigation */
+        nav {
+            background: var(--primary);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
 
-        <link href="css/bootstrap-icons.css" rel="stylesheet">
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-        <link href="css/templatemo-ebook-landing.css" rel="stylesheet">
-    </head>
-    
-    <body>
+        nav .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
 
-        <main>
+        nav .logo span {
+            color: var(--highlight);
+        }
 
-            <nav class="navbar navbar-expand-lg">
-                <div class="container">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="images/robcruz.png" class="roblogo">
-                    </a>
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            margin: 0;
+        }
 
-                    <div class="d-lg-none ms-auto me-3">
-                        <a href="#" class="btn custom-btn custom-border-btn btn-naira btn-inverted">
-                            <i class="btn-icon bi-cloud-download"></i>
-                            <span>Book Us Now!</span><!-- duplicated another one below for mobile -->
-                        </a>
-                    </div>
-    
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-    
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-lg-auto me-lg-4">
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_1">Home</a>
-                            </li>
-    
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_2">SEO</a>
-                            </li>
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
 
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_3">Wordpress</a>
-                            </li>
+        nav a:hover {
+            color: var(--highlight);
+        }
 
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_4">Shopify</a>
-                            </li>
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
 
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_5">Contact</a>
-                            </li>
-                        </ul>
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
-                        <div class="d-none d-lg-block">
-                            <a href="files/Robertcruz.pdf" class="btn custom-btn custom-border-btn btn-naira btn-inverted">
-                                <i class="btn-icon bi-cloud-download"></i>
-                                <span>Download my CV</span><!-- duplicated above one for mobile -->
-                            </a>
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            color: #ddd;
+            margin-bottom: 2rem;
+            max-width: 700px;
+        }
+
+        .hero .highlight {
+            color: var(--highlight);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            background: var(--highlight);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #d63850;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(233, 69, 96, 0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: #f0f0f0;
+            transform: translateY(-2px);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        section .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+        }
+
+        /* About Section */
+        .about {
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            color: var(--highlight);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 2rem;
+            background: var(--light);
+            border-radius: 10px;
+        }
+
+        .stat-box .number {
+            font-size: 2.5rem;
+            color: var(--highlight);
+            font-weight: bold;
+        }
+
+        .stat-box .label {
+            color: var(--text-light);
+            margin-top: 0.5rem;
+        }
+
+        /* Skills Section */
+        .skills {
+            background: var(--primary);
+            color: white;
+        }
+
+        .skills h2 {
+            color: white;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .skill-category {
+            background: var(--secondary);
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--highlight);
+        }
+
+        .skill-category h4 {
+            color: var(--highlight);
+            margin-bottom: 1rem;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .skill-category li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--highlight);
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            background: white;
+        }
+
+        .portfolio-nav {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .portfolio-filter {
+            padding: 0.7rem 1.5rem;
+            border: 2px solid var(--accent);
+            background: white;
+            color: var(--accent);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        .portfolio-filter.active {
+            background: var(--accent);
+            color: white;
+        }
+
+        .portfolio-filter:hover {
+            background: var(--accent);
+            color: white;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .portfolio-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(233, 69, 96, 0.2);
+        }
+
+        .portfolio-item-header {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            min-height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .portfolio-item-header h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .portfolio-item-type {
+            font-size: 0.9rem;
+            color: var(--highlight);
+            font-weight: 600;
+        }
+
+        .portfolio-item-content {
+            padding: 1.5rem;
+        }
+
+        .portfolio-item-content p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .portfolio-link {
+            color: var(--highlight);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .portfolio-link:hover {
+            color: var(--accent);
+        }
+
+        /* Services Section */
+        .services {
+            background: var(--light);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(233, 69, 96, 0.15);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--highlight);
+        }
+
+        .service-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        /* Automation Section */
+        .automation {
+            background: white;
+        }
+
+        .workflow-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .workflow-card {
+            background: var(--light);
+            border-radius: 10px;
+            padding: 2rem;
+            border-left: 4px solid var(--highlight);
+        }
+
+        .workflow-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .workflow-features {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .workflow-features li {
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            position: relative;
+            color: var(--text-light);
+        }
+
+        .workflow-features li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--highlight);
+            font-weight: bold;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: var(--primary);
+            color: white;
+        }
+
+        .testimonials h2 {
+            color: white;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial {
+            background: var(--secondary);
+            padding: 2rem;
+            border-radius: 10px;
+            border-top: 3px solid var(--highlight);
+        }
+
+        .testimonial-text {
+            margin-bottom: 1.5rem;
+            font-style: italic;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--highlight);
+        }
+
+        .testimonial-role {
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info h3 {
+            color: var(--primary);
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item-icon {
+            font-size: 1.5rem;
+            color: var(--highlight);
+            min-width: 30px;
+        }
+
+        .contact-item-content {
+            flex: 1;
+        }
+
+        .contact-item-label {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-item-value {
+            color: var(--text-light);
+        }
+
+        .contact-item-value a {
+            color: var(--highlight);
+            text-decoration: none;
+        }
+
+        .contact-item-value a:hover {
+            text-decoration: underline;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: var(--highlight);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 3rem 1.5rem;
+            }
+
+            section h2 {
+                font-size: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background: var(--primary);
+                display: none;
+                gap: 0;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav ul li {
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+                padding: 1rem;
+            }
+        }
+
+        /* Hidden by default, shown when filter matches */
+        .portfolio-item.hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">Robert<span>Cruz</span></a>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul id="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#automation">Automation</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Senior <span class="highlight">E-commerce Specialist</span> & <span class="highlight">SEO Specialist</span></h1>
+            <p class="subtitle">Building optimized, high-converting websites and AI automation workflows for global clients. <br>Specializing in US & UK markets with 5+ years of proven results.</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Get Started Today</a>
+                <a href="#about" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p class="section-subtitle">Driving Digital Success for Global Businesses Through Smart SEO</p>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Hi, I'm Robert</h3>
+                    <p>A Senior E-commerce Specialist focused on driving digital growth for global brands through strategic SEO and performance-led execution.</p>
+                    <p>With over 5+ years of hands-on experience, I work closely with businesses in the US and UK markets to strengthen their online presence, increase visibility, and scale revenue. My expertise blends technical SEO, conversion-focused eCommerce development, and data-driven optimization to deliver measurable results.</p>
+                    <p>I focus on building high-performing storefronts and smart automation systems using tools like GoHighLevel, Zapier, Make.com, and n8n. I also use AI tools like Claude, OpenAI, ElevenLabs, and Perplexity to make tasks faster, easier, and more efficient. My goal is to create scalable systems that bring traffic, turn leads into customers, and keep them coming back.</p>
+                </div>
+                <div>
+                    <div class="stats">
+                        <div class="stat-box">
+                            <div class="number">5+</div>
+                            <div class="label">Years Experience</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="number">50+</div>
+                            <div class="label">Projects Completed</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="number">100%</div>
+                            <div class="label">Client Satisfaction</div>
                         </div>
                     </div>
                 </div>
-            </nav>
-            
+            </div>
+        </div>
+    </section>
 
-            <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
-                <div class="container">
-                    <div class="row">
+    <!-- Skills Section -->
+    <section class="skills">
+        <div class="container">
+            <h2>Core Specializations</h2>
+            <p class="section-subtitle" style="color: #ddd;">Proven expertise across multiple domains</p>
 
-                        <div class="col-lg-6 col-12 mb-5 pb-5 pb-lg-0 mb-lg-0">
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>📊 SEO & Analytics</h4>
+                    <ul>
+                        <li>Technical SEO</li>
+                        <li>On-Page & Off-Page SEO</li>
+                        <li>Keyword Research</li>
+                        <li>Site Audits & Optimization</li>
+                        <li>Google Search Console</li>
+                        <li>GA4 & Ahrefs</li>
+                    </ul>
+                </div>
 
-                            <h6>Empowering Digital Success</h6>
+                <div class="skill-category">
+                    <h4>🌐 WordPress Development</h4>
+                    <ul>
+                        <li>Custom WordPress Themes</li>
+                        <li>WooCommerce Stores</li>
+                        <li>Elementor Pro Design</li>
+                        <li>Performance Optimization</li>
+                        <li>Security Hardening</li>
+                        <li>Plugin Development</li>
+                    </ul>
+                </div>
 
-                            <h1 class="text-white mb-4">All-in-One Services, specializing in SEO, WordPress, Shopify, and captivating Content Creation</h1>
+                <div class="skill-category">
+                    <h4>🛒 E-Commerce Solutions</h4>
+                    <ul>
+                        <li>Shopify Development</li>
+                        <li>WooCommerce Customization</li>
+                        <li>Payment Integration</li>
+                        <li>Conversion Optimization</li>
+                        <li>Store Migration</li>
+                        <li>Product Optimization</li>
+                    </ul>
+                </div>
 
-                            <a href="#discover-more    " class="btn custom-btn smoothscroll me-3">Discover More</a>
+                <div class="skill-category">
+                    <h4>🤖 AI Automation Tools</h4>
+                    <ul>
+                        <li>GoHighLevel CRM</li>
+                        <li>n8n Workflows</li>
+                        <li>Zapier Integration</li>
+                        <li>Make.com Automation</li>
+                        <li>Webhook Setup</li>
+                        <li>API Integration</li>
+                    </ul>
+                </div>
 
-                            <a href="#about-me" class="link link--kale smoothscroll">About Me</a>
-                        </div>
+                <div class="skill-category">
+                    <h4>💻 Technical Skills</h4>
+                    <ul>
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript & PHP</li>
+                        <li>MySQL & Database</li>
+                        <li>Git Version Control</li>
+                        <li>Server Management</li>
+                        <li>API Development</li>
+                    </ul>
+                </div>
 
-                        <div class="hero-image-wrap col-lg-6 col-12 mt-3 mt-lg-0">
-                            <img src="images/seosamples.png" class="hero-image img-fluid" alt="education online books">
-                        </div>
+                <div class="skill-category">
+                    <h4>📧 Marketing & Growth</h4>
+                    <ul>
+                        <li>Email Marketing</li>
+                        <li>Lead Generation</li>
+                        <li>Cold Calling</li>
+                        <li>Content Creation</li>
+                        <li>A/B Testing</li>
+                        <li>Analytics Reporting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Services I Offer</h2>
+            <p class="section-subtitle">Comprehensive solutions for your digital needs</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🌐</div>
+                    <h3>WordPress Development</h3>
+                    <p>Custom WordPress websites, WooCommerce stores, plugin development, and complete site optimization for performance and conversions.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <h3>Technical SEO</h3>
+                    <p>Comprehensive SEO audits, technical optimization, on-page SEO, backlink strategy, and ranking improvement for competitive keywords.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">⚙️</div>
+                    <h3>AI Automation</h3>
+                    <p>Advanced workflow automation using GoHighLevel, n8n, Zapier, and Make.com. CRM integration, email automation, and process optimization.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🛍️</div>
+                    <h3>E-Commerce Solutions</h3>
+                    <p>Shopify & WooCommerce development, payment integration, inventory management, conversion optimization, and store scaling strategies.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>GoHighLevel Setup</h3>
+                    <p>Complete CRM implementation, email marketing workflows, sales funnel setup, and client management system configuration.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>Site Optimization</h3>
+                    <p>Performance optimization, security hardening, migration services, mobile responsiveness, and conversion rate optimization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2>Portfolio & Projects</h2>
+            <p class="section-subtitle">Completed websites across different industries and platforms</p>
+
+            <div class="portfolio-nav">
+                <button class="portfolio-filter active" onclick="filterPortfolio('all')">All Projects</button>
+                <button class="portfolio-filter" onclick="filterPortfolio('business')">Business Sites</button>
+                <button class="portfolio-filter" onclick="filterPortfolio('ecommerce')">E-Commerce</button>
+                <button class="portfolio-filter" onclick="filterPortfolio('blog')">Blog Sites</button>
+            </div>
+
+            <div class="gallery" id="portfolio-gallery">
+                <!-- Business Sites -->
+                <div class="portfolio-item" data-category="business">
+                    <div class="portfolio-item-header">
+                        <div class="portfolio-item-type">Real Estate</div>
+                        <h3>James Sampson Capital</h3>
+                    </div>
+                    <div class="portfolio-item-content">
+                        <p>High-end real estate investment website with professional design and lead generation optimization.</p>
+                        <a href="https://jamessampson.capital/" class="portfolio-link" target="_blank">Visit Website →</a>
                     </div>
                 </div>
-            </section>
 
-
-            <section class="featured-section">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-8 col-12">
-                            <div class="avatar-group d-flex flex-wrap align-items-center">
-                                <img src="images/Clients/Frank.jpg" class="img-fluid avatar-image" alt="">
-
-                                <img src="images/Clients/Kessa-Gooden.jpg" class="img-fluid avatar-image avatar-image-left" alt="">
-
-                                <img src="images/Clients/Sunny.jpg" class="img-fluid avatar-image avatar-image-left" alt="">
-
-                                <img src="images/Clients/zakia-ringgold.jpg" class="img-fluid avatar-image avatar-image-left" alt="">
-
-                                <div class="reviews-group mt-3 mt-lg-0">
-                                    <strong>4.5</strong>
-
-                                    <i class="bi-star-fill"></i>
-                                    <i class="bi-star-fill"></i>
-                                    <i class="bi-star-fill"></i>
-                                    <i class="bi-star-fill"></i>
-                                    <i class="bi-star"></i>
-
-                                    <small class="ms-3">2,564 reviews</small>
-                                </div>
-                            </div>
-                        </div>
+                <div class="portfolio-item" data-category="business">
+                    <div class="portfolio-item-header">
+                        <div class="portfolio-item-type">Financial Services</div>
+                        <h3>KAM Financial Group</h3>
+                    </div>
+                    <div class="portfolio-item-content">
+                        <p>Professional financial advisory website with trust-building design and client services showcase.</p>
+                        <a href="https://kamfinancialgroup.com/" class="portfolio-link" target="_blank">Visit Website →</a>
                     </div>
                 </div>
-            </section>
 
-
-            <section class="py-lg-5"></section>
-
-
-            <section class="book-section section-padding" id="section_2">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-6 col-12">
-                            <img src="images/seo.jpg" class="img-block" alt="">
-                        </div>
-
-                        <div class="col-lg-6 col-12">
-                            <div class="book-section-info">
-                                <h6>Search Engine Optimization (SEO)</h6>
-
-
-                                <h2 class="mb-4">Elevate your online presence</h2>
-
-                                <p>Boost your website's visibility and rankings on search engines with our SEO services.</p>
-
-                                <p>With five years as a Virtual Assistan, I specialize in White Hat SEO techniques, including Search Engine Optimization (SEO), Social Media Marketing (SMM), Search Engine Marketing (SEM), Web Traffic optimization, and High Authority Manual Linkbuilding. I comprehend the intricacies of achieving top rankings for your website. Emphasizing genuine results, I offer affordable SEO solutions. Let's collaborate to elevate your website's SEO performance.</p>
-
-                                    <a href="https://payhip.com/b/iELM4" class="btn custom-btn smoothscroll me-3">Avail Your SEO Here!</a>                                
-                            </div>
-                        </div>
-
+                <div class="portfolio-item" data-category="business">
+                    <div class="portfolio-item-header">
+                        <div class="portfolio-item-type">CRM Preview</div>
+                        <h3>GoHighLevel Template</h3>
+                    </div>
+                    <div class="portfolio-item-content">
+                        <p>Real Estate design template in GoHighLevel with automated workflows and CRM integration.</p>
+                        <a href="https://app.gohighlevel.com/v2/preview/0kkVxLMWpLzHkfvjoUSI" class="portfolio-link" target="_blank">View Template →</a>
                     </div>
                 </div>
-            </section>
-            <section class="book-section section-padding" id="section_3">
-                <div class="container">
-                    <div class="row">
 
-                        <div class="col-lg-6 col-12">
-                            <img src="images/Wordpress.jpg" class="img-block" alt="">
-                        </div>
-
-                        <div class="col-lg-6 col-12">
-                            <div class="book-section-info">
-                                <h6>Wordpress Development</h6>
-
-
-                                <h2 class="mb-4">Building Website for you</h2>
-
-                                <p>Create a powerful and dynamic website using WordPress, tailored to your business needs, Or Starting with your own Blog Page</p>
-                                <p>Are you looking for a professional WordPress developer to design, redesign, build, rebuild, duplicate, copy, clone or revamp WordPress websites?
-                                <p>Look no further!</p>
-                                <p>I'm an expert in WordPress Website Development. With years of expertise, I've successfully completed 100+ WordPress-related projects for startups and businesses.</p>
-                                <p>Are you in search of a captivating, easy-to-navigate, and conversion-focused Shopify store? Your quest ends here! Through my expert Shopify website design services, I bring your brand's distinctive narrative to the forefront with visually appealing and user-friendly designs.</p>
-                                <a href="https://payhip.com/b/BhgG8" class="btn custom-btn smoothscroll me-3">Transform Your Website Now</a>                                
-
-                            </div>
-                        </div>
-
+                <!-- E-Commerce Sites -->
+                <div class="portfolio-item" data-category="ecommerce">
+                    <div class="portfolio-item-header">
+                        <div class="portfolio-item-type">E-Commerce</div>
+                        <h3>America Roids Pro</h3>
+                    </div>
+                    <div class="portfolio-item-content">
+                        <p>Fully optimized e-commerce store with product catalog, payment integration, and SEO optimization.</p>
+                        <a href="https://americaroids.pro/" class="portfolio-link" target="_blank">Visit Store →</a>
                     </div>
                 </div>
-            </section>
-            <section class="book-section section-padding" id="section_4">
-                <div class="container">
-                    <div class="row">
 
-                        <div class="col-lg-6 col-12">
-                            <img src="images/shopify.jpg" class="img-block" alt="">
-                        </div>
-
-                        <div class="col-lg-6 col-12">
-                            <div class="book-section-info">
-                                <h6>Shopify Development</h6>
-
-
-                                <h2 class="mb-4">Scale up your business Local or International</h2>
-
-                                <p>Build and customize your online store with our Shopify development expertise.</p>
-                                <p>Are you in search of a captivating, easy-to-navigate, and conversion-focused Shopify store? Your quest ends here! Through my expert Shopify website design services, I bring your brand's distinctive narrative to the forefront with visually appealing and user-friendly designs.</p>
-
-                                <a href="https://payhip.com/b/2GrQ8" class="btn custom-btn smoothscroll me-3">Build You E-commerce Store With Me!</a>                                
-                            </div>
-                        </div>
-
+                <div class="portfolio-item" data-category="ecommerce">
+                    <div class="portfolio-item-header">
+                        <div class="portfolio-item-type">E-Commerce</div>
+                        <h3>KAJ3 LTD</h3>
+                    </div>
+                    <div class="portfolio-item-content">
+                        <p>International e-commerce platform with multi-currency support and logistics integration.</p>
+                        <a href="https://kaj3-ltd.online/" class="portfolio-link" target="_blank">Visit Store →</a>
                     </div>
                 </div>
-            </section>
 
-
-            <section>
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-12 col-12 text-center">
-                            <h6>Let's Start Upscale Your Business</h6>
-
-                            <h2 class="mb-5" id="about-me">Fun Facts about Me</h2>
-                        </div>
-
-                        <div class="col-lg-4 col-12">
-                            <nav id="navbar-example3" class="h-100 flex-column align-items-stretch">
-                                <nav class="nav nav-pills flex-column">
-                                    <a class="nav-link smoothscroll" href="#item-1">Introduction</a>
-
-                                    <a class="nav-link smoothscroll" href="#item-2">Level 1: <strong>What can you expect from Hiring Me</strong></a>
-
-                                    <a class="nav-link smoothscroll" href="#item-3">Level 2: <strong>Still Not Convince, Yet?</strong></a>
-
-                                    <a class="nav-link smoothscroll" href="#item-4">Level 3: <strong>Check Me Out Now!</strong></strong></a>
-                                </nav>
-                            </nav>
-                        </div>
-
-                        <div class="col-lg-8 col-12">
-                            <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
-                                <div class="scrollspy-example-item" id="item-1">
-                                    <h5>Itroduction of Medical Coder to Virtual Assistant</h5>
-
-                                    <p>Robert's journey is nothing short of inspiring. For years, he worked as a medical biller in a bustling office, diligently managing paperwork, insurance claims, and patient records. While he appreciated the stability, he couldn't shake the feeling that something was missing.</p>
-
-                                    <h5>Embracing Freedom and Flexibility</h5>
-                                    <p>One fateful day, Robert stumbled upon the world of virtual assistance, and it changed his life forever. Intrigued by the idea of working remotely and utilizing his technical skills, he decided to take the leap into becoming a home-based VA. And boy, was that a game-changer!</p>
-
-                                    <blockquote class="blockquote">“When you build technology it’s not just a matter of “what.” In most cases the success ends up determined by “how” you build it—which foundations you used, how simple and scalable it is.” <br><i></i>Tobi Lütke, founder and CEO of Shopify<i></i></blockquote>
-
-                                    <p>Say goodbye to long commutes through crazy traffic and office politics. Robert now enjoys the freedom to work from the comfort of his own home, setting his own hours and reclaiming his work-life balance. It's a win-win situation!</p>
-                                </div>
-
-                                <div class="scrollspy-example-item" id="item-2">
-                             <h5>What can you Expect from Hiring Me</h5>
-                                    <strong>SEO Specialist:</strong>
-                                    <ul>
-                                        <ol><strong>Keyword Research</strong>: Identifying relevant keywords for content optimization.</ol>
-                                        <ol><strong>On-Page SEO</strong>: Optimizing website content, meta tags, and other on-page elements.</ol>
-                                        <ol><strong>Off-Page SEO</strong>: Building quality backlinks and managing off-site factors.</ol>
-                                        <ol><strong>Technical SEO</strong>: Ensuring the website's technical aspects are search engine friendly.</ol>
-                                        <ol><strong>Analytics</strong>: Using tools like Google Analytics to analyze website performance and user behavior.</ol>
-                                        <ol><strong>Content Creation</strong>: Developing high-quality, SEO-friendly content.</ol>
-                                        </ul>
-                                    <strong>Web Developer (WordPress and Shopify):</strong>
-                                    <ul>
-                                        <ol><strong>HTML/CSS:</strong>Proficient in coding and styling for website development.</ol>
-                                        <ol><strong>PHP (WordPress):</strong> Understanding of PHP for WordPress theme and plugin development.</ol>
-                                        <ol><strong>Shopify Liquid (Shopify):</strong> Familiarity with Shopify's templating language for customization.</ol>
-                                        <ol><strong>Responsive Design:</strong> Creating websites that work well on various devices and screen sizes.</ol>
-                                        <ol><strong>CMS Management:</strong> Expertise in managing content using platforms like WordPress and Shopify.</ol>
-                                        <ol><strong>E-commerce Development:</strong> Building and optimizing online stores, especially for Shopify.</ol>
-                                        <ol><strong>Web Administrative:</strong> We will help you find the perfect yet most affordable domain, hosting, SSL, and customized email to kickstart your website</ol>
-                                    </ul>
-
-                                    <strong>Graphic Designer</strong>:
-                                    <ul>
-                                        <ol><strong>Canva Pro:</strong> Proficiency in tools like Canva, Photopea, and Adobe Illustrator</ol>
-                                        <ol><strong>Typography:</strong> Understanding of fonts and how to use them effectively.</ol>
-                                        <ol><strong>Branding:</strong> Developing and maintaining a consistent visual identity.</ol>
-                                    </ul>
-
-                                    <strong>Common Skills</strong>:
-                                    <ul>
-                                        <ol><strong>Communication:</strong> Effectively communicating ideas and collaborating with team members.</ol>
-                                        <ol><strong>Problem-Solving:</strong> Identifying and resolving issues in both technical and design aspects.</ol>
-                                        <ol><strong>Adaptability:</strong> Keeping up with industry trends and adapting to new technologies.</ol>
-                                    </ul>
-
-                                <div class="scrollspy-example-item" id="item-3">
-                                    <h5>Still Not Convince, Yet?</h5>
-
-                                <div class="scrollspy-example-item" id="item-3">
-                                    <h5>SEO Projects</h5>
-                                    <div class="pjct-content pjct-section" id="seoSlider">
-                                        <img class="mySlides" src="images/SEO_project1.jpg" style="width:100%">
-                                        <img class="mySlides" src="images/SEO_project2.jpg" style="width:100%">
-                                        <img class="mySlides" src="images/SEO_project3.jpg" style="width:100%">
-                                    </div>
-                            
-                                    <h5>WordPress Projects</h5>
-                                    <div class="pjct-content pjct-section" id="wordpressSlider">
-                                        <img class="mySlides" src="images/Wordpress_Project1.jpg" style="width:100%">
-                                        <img class="mySlides" src="images/Woocommerce_project.jpg" style="width:100%">
-                                        <img class="mySlides" src="images/Wordpress_Project2.jpg" style="width:100%">
-                                    </div>
-                            
-                                    <h5>Shopify Projects</h5>
-                                    <div class="pjct-content pjct-section" id="shopifySlider">
-                                        <img class="mySlides" src="images/Shopify_project1.jpg" style="width:100%">
-                                        <img class="mySlides" src="images/Shopify_project2.jpg" style="width:100%">
-                                        <img class="mySlides" src="images/Shopify_project3.jpg" style="width:100%">
-                                    </div>
-                                </div>
-
-                                <div class="scrollspy-example-item" id="item-4">
-                                    <h5>Check Me Out Now!</h5>
-                                    <p>We understand that every business is one-of-a-kind, and we're committed to delivering personalized solutions that cater to your unique needs and goals.</p>
-                                    <p>Whether you're starting a new online store or giving a makeover to an existing one, we're here to help you create a standout, user-friendly Shopify website that boosts your e-commerce success.</p>
-                                    <h3>CASE STUDY FOR PREVIOUS CLIENTS</h3>
-                                    <a href="files/phsrenovations.ca (1).pdf" class="btn custom-btn smoothscroll me-3">phsrenovations.ca</a>
-                                    <a href="files/taylormedicalgroup.net.pdf" class="btn custom-btn smoothscroll me-3">taylormedicalgroup.net</a>
-                                    <a href="files/surgicalarts.miami.pdf" class="btn custom-btn smoothscroll me-3">Surgicalarts.miami</a>
-
-                                </div>                                    
-                            </div>
-                        </div>
-
+                <div class="portfolio-item" data-category="ecommerce">
+                    <div class="portfolio-item-header">
+                        <div class="portfolio-item-type">E-Commerce</div>
+                        <h3>California Muscles Shop</h3>
+                    </div>
+                    <div class="portfolio-item-content">
+                        <p>Fitness product e-commerce store with inventory management and customer review system.</p>
+                        <a href="https://californiamuscles.shop/" class="portfolio-link" target="_blank">Visit Store →</a>
                     </div>
                 </div>
-            </section>
 
-
-            <section class="author-section section-padding" id="section_3">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-6 col-12">
-                            <img src="images/webdevrobcruz.jpg" class="author-image img-fluid" alt="">
-                        </div>
-
-                        <div class="col-lg-6 col-12 mt-5 mt-lg-0">
-                            <h6>Meet Your VA</h6>
-
-                            <h2 class="mb-4">Robert Cruz, CFMP</h2>
-                            <p>Take your brand to new heights with the power of local SEO services and a killer content marketing game plan.</p>
-                            <p>I'm introvert - Versatile professional, caffeine enthusiast, adept SEO Specialist, and creative Content Creator. My purpose? Empowering businesses in the digital realm while offering insights on a diverse array of subjects.</p>
-                                    <div class="col-lg-8 col-md-10 col-8 mx-auto">
-                                        <a href="https://payhip.com/webdevrob"><button class="form-control">Get Your Quotations Here!</button></a>
-                                    </div>
-                        </div>
-
+                <div class="portfolio-item" data-category="ecommerce">
+                    <div class="portfolio-item-header">
+                        <div class="portfolio-item-type">E-Commerce</div>
+                        <h3>Hulk Roids</h3>
+                    </div>
+                    <div class="portfolio-item-content">
+                        <p>Performance supplement store with optimized product pages and conversion tracking.</p>
+                        <a href="https://hulkroids.net/" class="portfolio-link" target="_blank">Visit Store →</a>
                     </div>
                 </div>
-            </section>
-        <div class="col-lg-12 col-12 text-center mb-5">
 
-                <h2>My Certifications</h2>
-                 <img src="images/UC-95f64193-4345-4574-9f7a-b153777aeece.jpeg" width="100%>
-         </div>
-
-            <section class="reviews-section section-padding" id="">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-12 col-12 text-center mb-5">
-                            <h6>Reviews</h6>
-
-                            <h2>What people saying...</h2>
-                        </div>
-
-                        <div class="col-lg-4 col-12">
-                            <div class="custom-block d-flex flex-wrap">
-                                <div class="custom-block-image-wrap d-flex flex-column">
-                                    <img src="images/Clients/Kessa-Gooden.jpg" class="img-fluid avatar-image" alt="">
-
-                                    <div class="text-center mt-3">
-                                        <span class="text-white">Kessa Gooden</span>
-
-                                        <strong class="d-block text-white">CEO of KAM Financial Group</strong>
-                                    </div>
-                                </div>
-
-                                <div class="custom-block-info">
-                                    <div class="reviews-group mb-3">
-                                        <strong>4.5</strong>
-
-                                        <i class="bi-star-fill"></i>
-                                        <i class="bi-star-fill"></i>
-                                        <i class="bi-star-fill"></i>
-                                        <i class="bi-star-fill"></i>
-                                        <i class="bi-star"></i>
-                                    </div>
-
-                                    <p class="mb-0">"Incredible work! The attention to detail in my website redesign was outstanding. They captured the essence of my brand perfectly, and the improved user experience is already making a noticeable impact on customer engagement. Highly recommended!"</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-12 my-5 my-lg-0">
-                            <div class="custom-block d-flex flex-wrap">
-                                <div class="custom-block-image-wrap d-flex flex-column">
-                                    <img src="images/Clients/Sunny.jpg" class="img-fluid avatar-image avatar-image-left" alt="">
-
-                                    <div class="text-center mt-3">
-                                        <span class="text-white">Frank</span>
-
-                                        <strong class="d-block text-white">Project Manager</strong>
-                                    </div>
-                                </div>
-
-                                <div class="custom-block-info">
-                                    <div class="reviews-group mb-3">
-                                        <strong>4.5</strong>
-
-                                        <i class="bi-star-fill"></i>
-                                        <i class="bi-star-fill"></i>
-                                        <i class="bi-star-fill"></i>
-                                        <i class="bi-star-fill"></i>
-                                        <i class="bi-star"></i>
-                                    </div>
-
-                                    <p class="mb-0">"Working with them was a game-changer for my e-commerce store. The SEO strategies implemented have significantly boosted our online visibility, leading to a noticeable uptick in traffic and sales. A true professional in the field!"</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-12">
-                            <div class="custom-block d-flex flex-wrap">
-                                <div class="custom-block-image-wrap d-flex flex-column">
-                                    <img src="images/Clients/zakia-ringgold.jpg" class="img-fluid avatar-image" alt="">
-
-                                    <div class="text-center mt-3">
-                                        <span class="text-white">Zakia Ringgold</span>
-
-                                        <strong class="d-block text-white">CEO of Business Tech Lab</strong>
-                                    </div>
-                                </div>
-
-                                <div class="custom-block-info">
-                                    <div class="reviews-group mb-3">
-                                        <strong>5</strong>
-
-                                        <i class="bi-star-fill"></i>
-                                        <i class="bi-star-fill"></i>
-                                        <i class="bi-star-fill"></i>
-                                        <i class="bi-star-fill"></i>
-                                        <i class="bi-star-fill"></i>
-                                    </div>
-
-                                    <p class="mb-0">Impressed by the efficiency and creativity! The WordPress customization they did for my blog was exactly what I envisioned.</p>
-                                </div>
-                            </div>
-                        </div>
-
+                <div class="portfolio-item" data-category="ecommerce">
+                    <div class="portfolio-item-header">
+                        <div class="portfolio-item-type">E-Commerce</div>
+                        <h3>EE Grants Organization</h3>
+                    </div>
+                    <div class="portfolio-item-content">
+                        <p>Non-profit organization website with donation system and resource center.</p>
+                        <a href="https://eegrants.org/" class="portfolio-link" target="_blank">Visit Site →</a>
                     </div>
                 </div>
-            </section>
 
+                <!-- Blog Sites -->
+                <div class="portfolio-item" data-category="blog">
+                    <div class="portfolio-item-header">
+                        <div class="portfolio-item-type">Blog & Content</div>
+                        <h3>America Roids Blog</h3>
+                    </div>
+                    <div class="portfolio-item-content">
+                        <p>Content-focused blog with SEO optimization, multiple categories, and reader engagement strategies.</p>
+                        <a href="https://americaroids.biz/" class="portfolio-link" target="_blank">Visit Blog →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <section class="contact-section section-padding" id="section_5">
-                <div class="container">
-                    <div class="row">
+    <!-- Automation Section -->
+    <section class="automation" id="automation">
+        <div class="container">
+            <h2>AI Automation & Workflows</h2>
+            <p class="section-subtitle">Advanced n8n workflows for business automation and customer engagement</p>
 
-                        <div class="col-lg-5 col-12 mx-auto">
-                            <form class="custom-form ebook-download-form bg-white shadow" action="#" method="post" role="form">
-                                <div class="text-center mb-5">
-                                    <h2 class="mb-1" id="discover-more">Know Your Quotations Here!</h2>
-                                </div>
-                                    <div class="col-lg-8 col-md-10 col-8 mx-auto">
-                                        <a href="mailto:robcruz.fx@gmail.com"><button class="form-control">Send Us an Email</button></a>
-                                    </div>
-                                </div>
-                            </form>
+            <div class="workflow-showcase">
+                <div class="workflow-card">
+                    <h3>📝 Form Webhook to CRM</h3>
+                    <p>Automatically capture form submissions and route them to your CRM system with instant notifications.</p>
+                    <ul class="workflow-features">
+                        <li>GHL Form Webhook Integration</li>
+                        <li>Data Validation & Mapping</li>
+                        <li>CRM Record Creation</li>
+                        <li>Email Confirmation Sent</li>
+                        <li>Instant Slack Notification</li>
+                    </ul>
+                </div>
+
+                <div class="workflow-card">
+                    <h3>🤖 Customer Support Chatbot</h3>
+                    <p>AI-powered chatbot using n8n and Claude for intelligent customer support and lead qualification.</p>
+                    <ul class="workflow-features">
+                        <li>Natural Language Processing</li>
+                        <li>AI Message Response</li>
+                        <li>Lead Score Calculation</li>
+                        <li>Automatic Escalation</li>
+                        <li>Google Sheets Logging</li>
+                    </ul>
+                </div>
+
+                <div class="workflow-card">
+                    <h3>📧 Email Campaign Automation</h3>
+                    <p>Automated email sequences triggered by user behavior with personalization and A/B testing.</p>
+                    <ul class="workflow-features">
+                        <li>Trigger-Based Sequences</li>
+                        <li>User Segmentation</li>
+                        <li>Personalized Content</li>
+                        <li>Performance Tracking</li>
+                        <li>Automated Follow-ups</li>
+                    </ul>
+                </div>
+
+                <div class="workflow-card">
+                    <h3>📊 Lead Scoring & Routing</h3>
+                    <p>Intelligent lead qualification and automatic routing to the right sales team members based on criteria.</p>
+                    <ul class="workflow-features">
+                        <li>Multi-Factor Lead Scoring</li>
+                        <li>Automated Assignment</li>
+                        <li>Territory Routing</li>
+                        <li>Slack Notifications</li>
+                        <li>Analytics Tracking</li>
+                    </ul>
+                </div>
+
+                <div class="workflow-card">
+                    <h3>🔄 API Data Synchronization</h3>
+                    <p>Keep your data in sync across multiple platforms with real-time API integration workflows.</p>
+                    <ul class="workflow-features">
+                        <li>Multi-Platform Integration</li>
+                        <li>Real-Time Sync</li>
+                        <li>Error Handling</li>
+                        <li>Data Transformation</li>
+                        <li>Audit Logging</li>
+                    </ul>
+                </div>
+
+                <div class="workflow-card">
+                    <h3>💰 Payment Processing Pipeline</h3>
+                    <p>Automated payment processing with invoice generation and delivery workflows.</p>
+                    <ul class="workflow-features">
+                        <li>Stripe Integration</li>
+                        <li>Invoice Generation</li>
+                        <li>Receipt Email Delivery</li>
+                        <li>Accounting Records</li>
+                        <li>Failure Handling</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Client Testimonials</h2>
+            <p class="section-subtitle" style="color: #ddd;">What satisfied clients say about our work</p>
+
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <div class="testimonial-text">"Incredible work! The attention to detail in my website redesign was outstanding. They captured the essence of my brand perfectly, and the improved user experience is already making a noticeable impact on customer engagement. Highly recommended!"</div>
+                    <div class="testimonial-author">Kessa Gooden</div>
+                    <div class="testimonial-role">CEO of KAM Financial Group</div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="testimonial-text">"Working with them was a game-changer for my e-commerce store. The SEO strategies implemented have significantly boosted our online visibility, leading to a noticeable uptick in traffic and sales. A true professional in the field!"</div>
+                    <div class="testimonial-author">Frank Martinez</div>
+                    <div class="testimonial-role">Project Manager</div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="testimonial-text">"Impressed by the efficiency and creativity! The WordPress customization they did for my blog was exactly what I envisioned. Beyond expectations on timeline and quality."</div>
+                    <div class="testimonial-author">Zakia Ringgold</div>
+                    <div class="testimonial-role">CEO of Business Tech Lab</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Let's Work Together</h2>
+            <p class="section-subtitle">Ready to scale your business online? Let's discuss your project and create a solution that drives results.</p>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon">📧</div>
+                        <div class="contact-item-content">
+                            <div class="contact-item-label">Email</div>
+                            <div class="contact-item-value"><a href="mailto:robcruz.fx@gmail.com">robcruz.fx@gmail.com</a></div>
+                            <small>Best for project inquiries and detailed discussions</small>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon">📱</div>
+                        <div class="contact-item-content">
+                            <div class="contact-item-label">WhatsApp/Phone</div>
+                            <div class="contact-item-value"><a href="tel:+639239664483">+63 923 966 483</a></div>
+                            <small>Available for urgent consultations</small>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon">🌍</div>
+                        <div class="contact-item-content">
+                            <div class="contact-item-label">Location</div>
+                            <div class="contact-item-value">Buhangin, Davao City, Philippines</div>
+                            <small>UTC+8 timezone, available globally</small>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon">💼</div>
+                        <div class="contact-item-content">
+                            <div class="contact-item-label">Portfolio</div>
+                            <div class="contact-item-value"><a href="https://payhip.com/webdevrob" target="_blank">payhip.com/webdevrob</a></div>
+                            <small>View complete work samples</small>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://instagram.com/webdev_rob" target="_blank" title="Instagram">📷</a>
+                        <a href="https://facebook.com/treavor.zurc" target="_blank" title="Facebook">👤</a>
+                        <a href="https://onlinejobs.ph/jobseekers/info/1235637" target="_blank" title="Online Jobs">💼</a>
+                    </div>
+                </div>
+
+                <div class="contact-info">
+                    <h3>Availability & Response</h3>
+
+                    <div style="background: var(--light); padding: 2rem; border-radius: 10px;">
+                        <div style="margin-bottom: 1.5rem;">
+                            <strong style="color: var(--primary); display: block; margin-bottom: 0.5rem;">Weekday Hours</strong>
+                            <p style="color: var(--text-light);">Monday - Friday: 9:00 AM - 6:00 PM (UTC+8)</p>
                         </div>
 
-                        <div class="col-lg-6 col-12">
-                            <h6 class="mt-5">Say hi and talk to us</h6>
+                        <div style="margin-bottom: 1.5rem;">
+                            <strong style="color: var(--primary); display: block; margin-bottom: 0.5rem;">Weekend</strong>
+                            <p style="color: var(--text-light);">Available for urgent projects</p>
+                        </div>
 
-                            <h2 class="mb-4">Contact</h2>
+                        <div style="margin-bottom: 1.5rem;">
+                            <strong style="color: var(--primary); display: block; margin-bottom: 0.5rem;">Response Time</strong>
+                            <p style="color: var(--text-light);">Within 24 hours</p>
+                        </div>
 
-                            <p class="mb-3">
-                                <i class="bi-geo-alt me-2"></i>
-                                Davao City, Philippines
-                            </p>
-
-                            <p class="mb-2">
-                                <a href="tel: 010-020-0340" class="contact-link">
-                                    +63922 396 6483 - Whatsapp
-                                </a>
-                            </p>
-
-                            <p>
-                                <a href="mailto:robcruz.fx@gmail.com" class="contact-link">
-                                    robcruz.fx@gmail.com
-                                </a>
-                            </p>
-
-                            <h6 class="site-footer-title mt-5 mb-3">Social</h6>
-
-                            <ul class="social-icon mb-4">
-                                <li class="social-icon-item">
-                                    <a href="https://www.instagram.com/webdev_rob/" class="social-icon-link bi-instagram"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="https://www.onlinejobs.ph/jobseekers/info/1235637" class="social-icon-link bi-twitter"></a>
-                                </li>
-                                
-                                <li class="social-icon-item">
-                                    <a href="https://web.facebook.com/treavor.zurc/" class="social-icon-link bi-facebook"></a>
-                                </li>
-
-                            </ul>
-
-                            <p class="copyright-text">Copyright © 2048 Robert Cruz</p>
+                        <div style="padding-top: 1rem; border-top: 2px solid #ddd;">
+                            <p style="color: var(--text-light); margin: 1rem 0;">✓ Currently accepting new projects</p>
+                            <a href="mailto:robcruz.fx@gmail.com" class="btn btn-primary" style="width: 100%; text-align: center;">Start Your Project</a>
                         </div>
                     </div>
                 </div>
-            </section>
-        </main>
+            </div>
+        </div>
+    </section>
 
-        <!-- JAVASCRIPT FILES -->
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.bundle.min.js"></script>
-        <script src="js/jquery.sticky.js"></script>
-        <script src="js/click-scroll.js"></script>
-        <script src="js/custom.js"></script>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Robert Cruz. All rights reserved. | Specializing in US & UK Markets</p>
+    </footer>
 
-    </body>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('active');
+        }
+
+        function filterPortfolio(category) {
+            // Update active button
+            document.querySelectorAll('.portfolio-filter').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Filter items
+            const items = document.querySelectorAll('.portfolio-item');
+            items.forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        }
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                        document.getElementById('nav-menu').classList.remove('active');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
 </html>
